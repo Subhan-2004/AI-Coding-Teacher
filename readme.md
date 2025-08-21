@@ -1,6 +1,3 @@
-Brief: Below is the complete `readme.md` file content.
-
-```markdown
 # AI Coding Teacher
 
 An interactive Streamlit app that acts as a patient, Socratic AI mentor for learning programming. It adapts depth by level, explains pasted code, suggests improvements, generates exercises, tracks topical progress, summarizes long chats, streams responses, and auto‑continues when truncated.
@@ -34,7 +31,7 @@ An interactive Streamlit app that acts as a patient, Socratic AI mentor for lear
 ---
 
 ## 📁 Project Structure
-
+```
 app.py          Main Streamlit application
 utils.py        Chat history init + export helpers
 requirements.txt Dependencies
