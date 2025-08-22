@@ -36,7 +36,7 @@ st.set_page_config(
 # -----------------------------
 client = OpenAI(
     base_url="https://api.aimlapi.com/v1",
-    api_key=st.secrets["AIML_API_KEY"]
+    api_key=os.getenv("OPENAI_API_KEY")
     # os.getenv("OPENAI_API_KEY")
 )
 #st.secrets["AIML_API_KEY"] use this if the API key is stored in Streamlit secrets.
