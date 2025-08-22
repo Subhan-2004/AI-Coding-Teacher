@@ -36,7 +36,8 @@ st.set_page_config(
 # -----------------------------
 client = OpenAI(
     base_url="https://api.aimlapi.com/v1",
-    api_key=os.getenv("OPENAI_API_KEY")
+    api_key=st.secrets["AIML_API_KEY"]
+    # os.getenv("OPENAI_API_KEY")
 )
 #st.secrets["AIML_API_KEY"] use this if the API key is stored in Streamlit secrets.
 
@@ -234,7 +235,7 @@ if level != st.session_state.level:
 
 temperature = st.sidebar.slider("Temperature", 0.0, 1.2, 0.7, 0.05)
 top_p = st.sidebar.slider("Top‑p", 0.1, 1.0, 0.9, 0.05)
-output_cap = st.sidebar.slider("Max output tokens (per segment)", 20000, 400000, 20000, 10000)
+output_cap = st.sidebar.slider("Max output tokens (per segment)", 1000, 10000, 2000, 500)
 auto_continue = st.sidebar.checkbox("Auto‑continue if truncated", True)
 max_continuations = st.sidebar.slider("Max continuations", 0, 5, 2)
 
